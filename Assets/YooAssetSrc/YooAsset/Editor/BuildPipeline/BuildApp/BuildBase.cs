@@ -117,6 +117,8 @@ namespace BuildPipelineCore
                 if (buildReport.summary.result == BuildResult.Succeeded)
                 {
                     LogMaster.BP("打包成功。path: " + buildReport.summary.outputPath);
+
+                    BuildApp.OpenRelease();
                 }
                 else if (buildReport.summary.result != BuildResult.Succeeded)
                 {

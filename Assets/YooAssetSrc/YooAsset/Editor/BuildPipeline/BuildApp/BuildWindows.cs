@@ -40,6 +40,8 @@ namespace BuildPipelineCore
             playerOpts.target = BuildTarget.StandaloneWindows64;
             playerOpts.options = options;
 
+            LogMaster.BP($"Get Width {PlayerSettings.defaultScreenWidth}  Height {PlayerSettings.defaultScreenHeight} ");
+
             return playerOpts;
         }
 
@@ -50,6 +52,8 @@ namespace BuildPipelineCore
             PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
             PlayerSettings.defaultScreenWidth = ArgsInfo.WindowWidth;
             PlayerSettings.defaultScreenHeight = ArgsInfo.WindowHeight;
+
+            LogMaster.BP($"Set Width {ArgsInfo.WindowWidth}  Height {ArgsInfo.WindowHeight} ");
         }
     }
 }

@@ -51,5 +51,61 @@ namespace BuildPipelineCore
             });
         }
 
+
+
+
+
+        [MenuItem("QuickHelper/打开配置表 data")]
+        public static void OpenData()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../../data/excel/");
+        }
+
+        [MenuItem("QuickHelper/打开协议 Proto")]
+        public static void OpenProto()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../../proto/");
+        }
+
+        [MenuItem("QuickHelper/Open Release")]
+        public static void OpenRelease()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../Release/");
+        }
+
+
+
+        [MenuItem("QuickHelper/Open Bundles")]
+        public static void OpenBundles()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../Bundles/");
+        }
+
+        [MenuItem("QuickHelper/Open Root Project")]
+        public static void OpenRoot()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../../");
+        }
+
+        [MenuItem("QuickHelper/Open Tools")]
+        public static void OpenTools()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../../Tools/");
+        }
+
+        [MenuItem("QuickHelper/Open Cache Bundles")]
+        public static void OpenCacheBundles()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../Sandbox/");
+        }
+
+
+        [MenuItem("QuickHelper/Open HybridCLR Output")]
+        public static void OpenHybridCLROutput()
+        {
+            Application.OpenURL("file://" + Application.dataPath + "/../HybridCLRData/HotUpdateDlls/");
+        }
+
+
     }
 }

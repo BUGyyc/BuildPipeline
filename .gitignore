@@ -29,3 +29,4 @@ YooAsset.Editor.csproj
 .vsconfig
 .vs/
 Bundles/UMI/
+Assets/StreamingAssets/BuildinFiles/
