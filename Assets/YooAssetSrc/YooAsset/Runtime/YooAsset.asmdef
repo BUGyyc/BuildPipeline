@@ -1,0 +1,17 @@
+{
+    "name": "YooAsset",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8f58a3eb34e98ca48943df76f39cb150",
+        "GUID:4b091c3836be8e241a6d658e5f01df67"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

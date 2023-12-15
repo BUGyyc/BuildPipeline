@@ -1,0 +1,24 @@
+{
+    "name": "UpgradeCore",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0a84d582f6a6fa4185f67ce934d99c2",
+        "GUID:e62322788ba70c5428b168602000a586",
+        "GUID:f22fac247a56d2d41b687bb0d900e54e",
+        "GUID:1ea6b676786131e4095182b742bb64ec",
+        "GUID:e34a5702dd353724aa315fb8011f08c3",
+        "GUID:c55575a9f1747c240822f4b7e0400716",
+        "GUID:b35e33884f6755d43b7e0511e88956d0",
+        "GUID:8f58a3eb34e98ca48943df76f39cb150",
+        "GUID:13ba8ce62aa80c74598530029cb2d649"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

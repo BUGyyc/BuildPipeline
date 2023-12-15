@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root Version="2.4">
+  <Common AutoAddressable="True" UniqueBundleName="True" ShowPackageView="True" ShowEditorAlias="True" />
+  <Package PackageName="UMI" PackageDesc="">
+    <Group GroupActiveRule="EnableGroup" GroupName="Login" GroupDesc="登录模块" AssetTags="">
+      <Collector CollectPath="Assets/Scenes/AppEntry.unity" CollectGUID="99c9720ab356a0642a771bea13969a05" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectScene" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/HotEntry.prefab" CollectGUID="18a93fd696ffaf24a93fab8f19d7cb17" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Hall" GroupDesc="广场模块" AssetTags="">
+      <Collector CollectPath="Assets/Arts/Scenes/Hall/HallScene2.unity" CollectGUID="096a232218368264dbf69fe17390a1f0" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/Scenes/Hall" CollectGUID="f871b6f1f4f02544aa8d203ac3853f0f" CollectType="MainAssetCollector" AddressRule="AddressByFilePath" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI/UIMap/Atlas/hallMap.jpg" CollectGUID="14f663fe03d03f44b9f19e124b5b815e" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="UI" GroupDesc="UI界面模块" AssetTags="">
+      <Collector CollectPath="Assets/YooAssetSrc/Space Shooter/GameRes/UIPanel/UICanvas.prefab" CollectGUID="1700631a871f2da418ca3815faed9394" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI" CollectGUID="587a141e2f98b524b8ae7588195d7e78" CollectType="MainAssetCollector" AddressRule="AddressByGroupAndFileNameWithExt" PackRule="PackDirectory" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI/UIHall/Atlas/Res_UIHall.spriteatlas" CollectGUID="d3fcc4d0c1186eb4bbc5266c96151f4b" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Config" GroupDesc="配置相关" AssetTags="">
+      <Collector CollectPath="Assets/DataBytes/Config" CollectGUID="e5b30b5160db06748ad9e16812f128fc" CollectType="MainAssetCollector" AddressRule="AddressByGroupAndFileNameWithExt" PackRule="PackSeparately" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Eys" GroupDesc="鹅鸭杀模块" AssetTags="">
+      <Collector CollectPath="Assets/Arts/Scenes/EYS01/TeamLobby01/TeamLobby2.unity" CollectGUID="2e74adfa957691543a2afead60344fa8" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Arts/Scenes/EYS01/EYS01/ESY.unity" CollectGUID="d3efb3394f2a9f04987a3d4959d4f777" CollectType="MainAssetCollector" AddressRule="AddressByFilePath" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI/UIEYS/Atlas/Res_UIEYS.spriteatlas" CollectGUID="6520512f169881342a5a2cd1318a7db8" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI/UIEYSSetting/Atlas/Res_UIEYSSetting.spriteatlas" CollectGUID="c40788ca6780df84abda64c3c09f3461" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="AAA" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Character" GroupDesc="角色模块" AssetTags="">
+      <Collector CollectPath="Assets/Arts/Roles/Boy" CollectGUID="dfadf066e17eed74181eef6dc24b1167" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectFBX" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Arts/Roles/Girl" CollectGUID="0ecc59bc88456b94da996495397c23db" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectFBX" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Arts/Roles/NPC" CollectGUID="1c3c81357da104a42994a458250763ad" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectFBX" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/Roles" CollectGUID="d012379aa5f983447b6e78ba0f1b3112" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndFileNameWithExt" PackRule="PackDirectory" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Common" GroupDesc="公共资源" AssetTags="">
+      <Collector CollectPath="Assets/Prefabs/Template/AudioItem.prefab" CollectGUID="e8cac71250bc6cd4690c50449f9bd2c8" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/Special" CollectGUID="e2e55a62bd3c0f740a5adba69084a668" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/Audios" CollectGUID="22e862ab6f45e6c42923c15db79b6059" CollectType="MainAssetCollector" AddressRule="AddressByFilePath" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Home" GroupDesc="家园" AssetTags="">
+      <Collector CollectPath="Assets/Arts/Scenes/HomeLand/HomeLand.unity" CollectGUID="3e0526f4e89d8d94a97d671f49c197b9" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Arts/Scenes/HomeLand/Building/HomeLand" CollectGUID="69613dce10f3fee45bbed80196f0a12a" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Diba" GroupDesc="蹦迪" AssetTags="">
+      <Collector CollectPath="Assets/Arts/Scenes/Concert/ConcertBake.unity" CollectGUID="02f1e1ecca9c2b04c92d848bb94047b1" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI/UIDiba/Atlas/Res_UIDiba.spriteatlas" CollectGUID="8b3931ed71c0cab43b675e91b6cfffcb" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Ugc" GroupDesc="公共厅" AssetTags="">
+      <Collector CollectPath="Assets/Arts/Scenes/ContentCentre/ContentCentre.unity" CollectGUID="78a965f2b215de842a421d5de9f67eb2" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/Scenes/ContentCentre/UgcController.prefab" CollectGUID="fa397a000c33b024e9409bcc0827b4f2" CollectType="MainAssetCollector" AddressRule="AddressByFilePath" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="NewPlay" GroupDesc="新手引导" AssetTags="">
+      <Collector CollectPath="Assets/Arts/Scenes/Newplay_building/Newplayer_002.unity" CollectGUID="c87934cc2cee82a4b87668849573f690" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndWithoutName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Shader" GroupDesc="shader变体" AssetTags="">
+      <Collector CollectPath="Assets/ShaderVariants/MyShaderVariants.shadervariants" CollectGUID="ff5b4aa790441f945b097e81d60616d1" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectShaderVariants" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Face" GroupDesc="捏脸" AssetTags="">
+      <Collector CollectPath="Assets/Prefabs/UI/Face/Atlas/Res_Face.spriteatlas" CollectGUID="79ea03478c4add043848944460824fb6" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI/Face/Atlas/Res_FaceClothes.spriteatlas" CollectGUID="ffbcabca4e5746540ac874f377828fef" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Prefabs/UI/Face/Atlas/Res_FaceBig.spriteatlas" CollectGUID="d435b91aa14865949b0fda4a143b5bca" CollectType="MainAssetCollector" AddressRule="AddressByUISpecial" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+  </Package>
+</root>
