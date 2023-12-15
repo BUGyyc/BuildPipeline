@@ -15,6 +15,11 @@ public class ConsoleToScreen : MonoBehaviour
 
     private Text text;
 
+    private void Awake()
+    {
+        //DontDestroyOnLoad(this.gameObject);
+    }
+
     private void Start()
     {
         text = this.GetComponent<Text>();

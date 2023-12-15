@@ -1031,12 +1031,12 @@ GameObject:
   - component: {fileID: 3788289046118881618}
   - component: {fileID: 7602556109455840698}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: ConsoleToSreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6433131739652440537
 RectTransform:
   m_ObjectHideFlags: 0

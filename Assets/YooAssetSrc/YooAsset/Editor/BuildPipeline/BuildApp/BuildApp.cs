@@ -27,7 +27,12 @@ namespace BuildPipelineCore
                 AutoBuildUtils.BuildAssetBundle(() =>
                 {
                     var buildTask = new AutoBuildWindow();
-                    buildTask.Build(true);
+                    buildTask.Build(true, () => 
+                    {
+                        LogMaster.BP("复制 DLL  Begin");
+                        BuildAssetsCommand.BuildAndCopyABAOTHotUpdateDlls();
+                        LogMaster.BP("复制 DLL  End");
+                    });
                 }, YooAsset.Editor.ECopyBuildinFileOption.ClearAndCopyAll);
             });
         }

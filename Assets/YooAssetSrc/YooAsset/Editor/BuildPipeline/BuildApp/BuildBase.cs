@@ -87,7 +87,7 @@ namespace BuildPipelineCore
         /// <summary>
         /// 构建入口
         /// </summary>
-        public void Build(bool localTest = false, Action buildDLLAction = null, Action buildAssetBundleAction = null)
+        public void Build(bool localTest = false, Action buildAOTAction = null)
         {
             try
             {
@@ -117,6 +117,12 @@ namespace BuildPipelineCore
                 if (buildReport.summary.result == BuildResult.Succeeded)
                 {
                     LogMaster.BP("打包成功。path: " + buildReport.summary.outputPath);
+
+                    if (buildAOTAction != null) 
+                    {
+                        buildAOTAction.Invoke();
+                    }
+
 
                     BuildApp.OpenRelease();
                 }
