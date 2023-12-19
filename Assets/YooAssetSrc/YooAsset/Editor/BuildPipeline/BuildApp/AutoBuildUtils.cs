@@ -89,7 +89,21 @@ namespace BuildPipelineCore
             PrebuildCommand.GenerateAll();
             LogMaster.BP("构建DLL  GenerateAll  End");
 
-       
+
+
+            LogMaster.BP("复制 DLL  Begin");
+            BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
+
+            LogMaster.BP("CompileDll DLL  Begin");
+            //! build DLL
+            CompileDllCommand.CompileDll(target);
+            LogMaster.BP("CompileDll DLL  End");
+
+
+            BuildAssetsCommand.CopyABAOTHotUpdateDlls(target);
+            AssetDatabase.Refresh();
+            LogMaster.BP("复制 DLL  End");
+
 
             LogMaster.BP("构建DLL End");
 

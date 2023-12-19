@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using HybridCLR.Editor.Commands;
 using HybridCLR.Editor;
+using static UnityEngine.GraphicsBuffer;
 
 namespace BuildPipelineCore
 {
@@ -15,8 +16,18 @@ namespace BuildPipelineCore
         public static void BuildSingleApp()
         {
             var buildTask = new AutoBuildWindow();
-            buildTask.Build();
+            buildTask.Build(true);
         }
+
+        [MenuItem("BuildPipeline/Build DLL + AssetBundle")]
+        public static void BuildDLL_AssetBundle()
+        {
+            AutoBuildUtils.BuildDLLAndCopy(() =>
+            {
+                AutoBuildUtils.BuildAssetBundle(null, YooAsset.Editor.ECopyBuildinFileOption.None); ;
+            });
+        }
+
 
 
         [MenuItem("BuildPipeline/（本地）构建 BuildIn 包")]
@@ -27,7 +38,20 @@ namespace BuildPipelineCore
                 AutoBuildUtils.BuildAssetBundle(() =>
                 {
                     var buildTask = new AutoBuildWindow();
-                    buildTask.Build(true, () => 
+                    buildTask.Build(true, null);
+                }, YooAsset.Editor.ECopyBuildinFileOption.ClearAndCopyAll);
+            });
+        }
+
+        [MenuItem("BuildPipeline/（本地）(弃用) --- 构建 BuildIn 包")]
+        public static void _BuildDLLAssetBundleAPP_BuildIn()
+        {
+            AutoBuildUtils.BuildDLLAndCopy(() =>
+            {
+                AutoBuildUtils.BuildAssetBundle(() =>
+                {
+                    var buildTask = new AutoBuildWindow();
+                    buildTask.Build(true, () =>
                     {
                         LogMaster.BP("复制 DLL  Begin");
                         BuildAssetsCommand.BuildAndCopyABAOTHotUpdateDlls();
@@ -36,6 +60,27 @@ namespace BuildPipelineCore
                 }, YooAsset.Editor.ECopyBuildinFileOption.ClearAndCopyAll);
             });
         }
+
+        [MenuItem("BuildPipeline/（本地）构建 DLL")]
+        public static void BuildDLLAndCopy()
+        {
+
+            AutoBuildUtils.BuildDLLAndCopy(null);
+            LogMaster.BP("复制 DLL  Begin");
+            BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
+
+            LogMaster.BP("CompileDll DLL  Begin");
+            //! build DLL
+            CompileDllCommand.CompileDll(target);
+            LogMaster.BP("CompileDll DLL  End");
+
+
+            BuildAssetsCommand.CopyABAOTHotUpdateDlls(target);
+            AssetDatabase.Refresh();
+            LogMaster.BP("复制 DLL  End");
+        }
+
+
 
 
         [MenuItem("BuildPipeline/（本地）构建 DLL + AssetBundle")]

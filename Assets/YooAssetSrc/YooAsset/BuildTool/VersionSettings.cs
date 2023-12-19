@@ -34,7 +34,7 @@ public static class VersionSettings
     /// <summary>
     /// Release 下是否使用本地 CDN
     /// </summary>
-    public const bool ReleaseLocalServerURL = false;
+    public const bool ReleaseLocalServerURL = true;
 
 #endif
 
