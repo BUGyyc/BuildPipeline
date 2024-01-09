@@ -91,9 +91,6 @@ namespace BuildPipelineCore
         {
             try
             {
-
-                localTest = true;
-
                 // 设置
                 LogMaster.BP("Build SwitchPlatform Begin");
                 SwitchPlatform(GetBuildTarget());

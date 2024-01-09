@@ -11,7 +11,9 @@ namespace BuildPipelineCore
 
         public const string APP_BUILD_OUTPUT_PATH = "../Release/";
 
-
+        /// <summary>
+        /// ! 单纯的首包构建，无多余AB
+        /// </summary>
         [MenuItem("BuildPipeline/Build Single App")]
         public static void BuildSingleApp()
         {
@@ -19,6 +21,9 @@ namespace BuildPipelineCore
             buildTask.Build(true);
         }
 
+        /// <summary>
+        /// !
+        /// </summary>
         [MenuItem("BuildPipeline/Build DLL + AssetBundle")]
         public static void BuildDLL_AssetBundle()
         {
@@ -51,12 +56,7 @@ namespace BuildPipelineCore
                 AutoBuildUtils.BuildAssetBundle(() =>
                 {
                     var buildTask = new AutoBuildWindow();
-                    buildTask.Build(true, () =>
-                    {
-                        LogMaster.BP("复制 DLL  Begin");
-                        BuildAssetsCommand.BuildAndCopyABAOTHotUpdateDlls();
-                        LogMaster.BP("复制 DLL  End");
-                    });
+                    buildTask.Build(true);
                 }, YooAsset.Editor.ECopyBuildinFileOption.ClearAndCopyAll);
             });
         }

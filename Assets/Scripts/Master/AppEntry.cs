@@ -52,12 +52,6 @@ namespace UMI
             Debug.Log($"资源系统运行模式：{PlayMode}");
             Application.targetFrameRate = 60;
             Application.runInBackground = true;
-
-#if !UNITY_EDITOR
-            PlayMode = EPlayMode.OfflinePlayMode;
-            Debug.Log($"纠正，资源系统运行模式：{PlayMode}");
-#endif
-
         }
 
         void Start()

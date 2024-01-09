@@ -30,3 +30,11 @@ YooAsset.Editor.csproj
 .vs/
 Bundles/UMI/
 Assets/StreamingAssets/BuildinFiles/
+Sandbox/
+SpatialSys.UnitySDK.csproj
+Unity.RenderPipelines.Core.Runtime.csproj
+Unity.RenderPipelines.Universal.Runtime.csproj
+Unity.VisualScripting.Core.csproj
+Unity.VisualScripting.Flow.csproj
+Unity-Logs-Viewer.csproj
+YooAssetCore.csproj

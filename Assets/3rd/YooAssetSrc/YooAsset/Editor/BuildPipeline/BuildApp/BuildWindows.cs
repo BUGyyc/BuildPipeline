@@ -36,7 +36,7 @@ namespace BuildPipelineCore
 
             BuildPlayerOptions playerOpts = new BuildPlayerOptions();
             playerOpts.scenes = GetBuildScenes();
-            playerOpts.locationPathName = ArgsInfo.OutProjectName + "/exe/umi.exe";
+            playerOpts.locationPathName = ArgsInfo.OutProjectName + $"/exe/{VersionSettings.ProjectName}.exe";
             playerOpts.target = BuildTarget.StandaloneWindows64;
             playerOpts.options = options;
 

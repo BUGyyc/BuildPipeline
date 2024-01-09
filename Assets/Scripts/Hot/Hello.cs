@@ -7,6 +7,10 @@ public class Hello
 
     public static void Run()
     {
-        Debug.Log("热更代码，输出：Hello, HybridCLR, test log");
+        Debug.Log("热更代码，输出：Hello, HybridCLR, test log------------------>");
+
+
+
+        Debug.Log("热更代码，Hello BuildPipeline");
     }
 }

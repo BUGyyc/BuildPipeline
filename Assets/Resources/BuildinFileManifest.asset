@@ -12,10 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b02dfa7aa9d4545b3417a18477fbee, type: 3}
   m_Name: BuildinFileManifest
   m_EditorClassIdentifier: 
-  BuildinFiles:
-  - umi_assets_arts_scene_battle_b70a01d67b67e8b81e7d9310cc5cd5af.bundle
-  - umi_assets_arts_scene_login_b62cc5ec4acd76d2d0cca17065f0895c.bundle
-  - umi_assets_arts_ui_df65b2b917367f8e1bf31a3a02ac6e32.bundle
-  - umi_assets_databytes_codebytes_hot_dll_bytes_444eff0941ec030e43084d3a0428d84f.rawfile
-  - umi_unityshaders_9c108607eee6e030a4fcdd1f5fb738fb.bundle
+  BuildinFiles: []
   NextPackageVersion: 

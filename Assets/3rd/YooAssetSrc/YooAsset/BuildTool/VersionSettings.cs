@@ -38,4 +38,7 @@ public static class VersionSettings
 
 #endif
 
+
+    public const string ProjectName = "BuildDemo";
+
 }
