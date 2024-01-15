@@ -118,8 +118,10 @@ namespace YooAsset
 				long fileLength = -1;
 				if (File.Exists(_tempFilePath))
 				{
+					//！判断已存在的文件长度
 					FileInfo fileInfo = new FileInfo(_tempFilePath);
 					fileLength = fileInfo.Length;
+					//！ 续下载的起始位置
 					_fileOriginLength = (ulong)fileLength;
 					_downloadedBytes = _fileOriginLength;
 				}

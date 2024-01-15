@@ -147,6 +147,7 @@ namespace YooAsset
 			var cache = GetOrCreateCache(package.PackageName);
 			var keys = cache.GetAllKeys();
 			List<string> result = new List<string>(keys.Count);
+			//！遍历旧的寻址路径是否在新的 清单文件中存在。如果不存在，就是需要删除的
 			foreach (var cacheGUID in keys)
 			{
 				if (package.IsIncludeBundleFile(cacheGUID) == false)

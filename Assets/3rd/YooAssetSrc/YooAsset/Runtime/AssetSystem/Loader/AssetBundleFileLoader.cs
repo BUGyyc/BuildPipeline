@@ -34,7 +34,8 @@ namespace YooAsset
         private string bundleName = "";
 #endif
 
-        public AssetBundleFileLoader(AssetSystemImpl impl, BundleInfo bundleInfo) : base(impl, bundleInfo)
+        public AssetBundleFileLoader(AssetSystemImpl impl, BundleInfo bundleInfo)
+            : base(impl, bundleInfo)
         {
             LogMaster.Log("[AssetBundleFileLoader] 创建一个 AB Loader " + bundleInfo.Bundle.BundleName);
 
@@ -57,14 +58,11 @@ namespace YooAsset
                 LogMaster.I("Loading font");
             }
 
-
             if (bundleName.Contains("_unityshaders"))
             {
                 LogMaster.I("Loading _unityshader");
             }
 #endif
-
-
 
             if (_steps == ESteps.None)
             {
@@ -72,13 +70,20 @@ namespace YooAsset
                 {
                     _steps = ESteps.Download;
                     FileLoadPath = MainBundleInfo.Bundle.CachedDataFilePath;
-                    LogMaster.Log("[AssetBundleFileLoader]", " LoadFromRemote	 FileLoadPath:" + FileLoadPath);
+                    LogMaster.Log(
+                        "[AssetBundleFileLoader]",
+                        " LoadFromRemote	 FileLoadPath:" + FileLoadPath
+                    );
                 }
                 else if (MainBundleInfo.LoadMode == BundleInfo.ELoadMode.LoadFromStreaming)
                 {
 #if UNITY_ANDROID
-                    EBundleLoadMethod loadMethod = (EBundleLoadMethod)MainBundleInfo.Bundle.LoadMethod;
-                    if (loadMethod == EBundleLoadMethod.LoadFromMemory || loadMethod == EBundleLoadMethod.LoadFromStream)
+                    EBundleLoadMethod loadMethod = (EBundleLoadMethod)
+                        MainBundleInfo.Bundle.LoadMethod;
+                    if (
+                        loadMethod == EBundleLoadMethod.LoadFromMemory
+                        || loadMethod == EBundleLoadMethod.LoadFromStream
+                    )
                     {
                         _steps = ESteps.Unpack;
                         FileLoadPath = MainBundleInfo.Bundle.CachedDataFilePath;
@@ -89,17 +94,23 @@ namespace YooAsset
                         FileLoadPath = MainBundleInfo.Bundle.StreamingFilePath;
                     }
 #else
-					_steps = ESteps.LoadFile;
-					FileLoadPath = MainBundleInfo.Bundle.StreamingFilePath;
+                    _steps = ESteps.LoadFile;
+                    FileLoadPath = MainBundleInfo.Bundle.StreamingFilePath;
 #endif
 
-                    LogMaster.Log("[AssetBundleFileLoader]", " LoadFromStreaming     FileLoadPath:" + FileLoadPath);
+                    LogMaster.Log(
+                        "[AssetBundleFileLoader]",
+                        " LoadFromStreaming     FileLoadPath:" + FileLoadPath
+                    );
                 }
                 else if (MainBundleInfo.LoadMode == BundleInfo.ELoadMode.LoadFromCache)
                 {
                     _steps = ESteps.LoadFile;
                     FileLoadPath = MainBundleInfo.Bundle.CachedDataFilePath;
-                    LogMaster.Log("[AssetBundleFileLoader]", " LoadFromCache    BundleName:" + MainBundleInfo.Bundle.BundleName);
+                    LogMaster.Log(
+                        "[AssetBundleFileLoader]",
+                        " LoadFromCache    BundleName:" + MainBundleInfo.Bundle.BundleName
+                    );
                 }
                 else
                 {
@@ -199,7 +210,8 @@ namespace YooAsset
                     {
                         _steps = ESteps.Done;
                         Status = EStatus.Failed;
-                        LastError = $"{nameof(IDecryptionServices)} is null : {MainBundleInfo.Bundle.BundleName}";
+                        LastError =
+                            $"{nameof(IDecryptionServices)} is null : {MainBundleInfo.Bundle.BundleName}";
                         YooLogger.Error(LastError);
                         return;
                     }
@@ -227,11 +239,20 @@ namespace YooAsset
                     else if (loadMethod == EBundleLoadMethod.LoadFromStream)
                     {
                         _stream = Impl.DecryptionServices.LoadFromStream(fileInfo);
-                        uint managedReadBufferSize = Impl.DecryptionServices.GetManagedReadBufferSize();
+                        uint managedReadBufferSize =
+                            Impl.DecryptionServices.GetManagedReadBufferSize();
                         if (_isWaitForAsyncComplete)
-                            CacheBundle = AssetBundle.LoadFromStream(_stream, 0, managedReadBufferSize);
+                            CacheBundle = AssetBundle.LoadFromStream(
+                                _stream,
+                                0,
+                                managedReadBufferSize
+                            );
                         else
-                            _createRequest = AssetBundle.LoadFromStreamAsync(_stream, 0, managedReadBufferSize);
+                            _createRequest = AssetBundle.LoadFromStreamAsync(
+                                _stream,
+                                0,
+                                managedReadBufferSize
+                            );
                     }
                     else
                     {
@@ -260,7 +281,7 @@ namespace YooAsset
                     }
                 }
 
-                // Check error			
+                // Check error
                 if (CacheBundle == null)
                 {
                     _steps = ESteps.Done;
@@ -272,11 +293,19 @@ namespace YooAsset
                     // 在AssetBundle文件加载失败的情况下，我们需要重新验证文件的完整性！
                     if (MainBundleInfo.LoadMode == BundleInfo.ELoadMode.LoadFromCache)
                     {
-                        var result = CacheSystem.VerifyingRecordFile(MainBundleInfo.Bundle.PackageName, MainBundleInfo.Bundle.CacheGUID);
+                        var result = CacheSystem.VerifyingRecordFile(
+                            MainBundleInfo.Bundle.PackageName,
+                            MainBundleInfo.Bundle.CacheGUID
+                        );
                         if (result != EVerifyResult.Succeed)
                         {
-                            YooLogger.Error($"Found possibly corrupt file ! {MainBundleInfo.Bundle.CacheGUID}");
-                            CacheSystem.DiscardFile(MainBundleInfo.Bundle.PackageName, MainBundleInfo.Bundle.CacheGUID);
+                            YooLogger.Error(
+                                $"Found possibly corrupt file ! {MainBundleInfo.Bundle.CacheGUID}"
+                            );
+                            CacheSystem.DiscardFile(
+                                MainBundleInfo.Bundle.PackageName,
+                                MainBundleInfo.Bundle.CacheGUID
+                            );
                         }
                     }
                 }
@@ -332,7 +361,9 @@ namespace YooAsset
                     if (_isShowWaitForAsyncError == false)
                     {
                         _isShowWaitForAsyncError = true;
-                        YooLogger.Error($"{nameof(WaitForAsyncComplete)} failed ! Try load bundle : {MainBundleInfo.Bundle.BundleName} from remote with sync load method !");
+                        YooLogger.Error(
+                            $"{nameof(WaitForAsyncComplete)} failed ! Try load bundle : {MainBundleInfo.Bundle.BundleName} from remote with sync load method !"
+                        );
                     }
                     break;
                 }
